@@ -1,31 +1,51 @@
-body {
+body,
+html {
   margin: 0;
   padding: 0;
   min-height: 700px;
+  background-color: #6464eb3d;
+  font-size: medium;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .container {
-  width: 90%;
+  width: 94%;
   margin: 0 auto;
   padding: 1rem;
+  top: 0;
 }
 .nav {
+  padding-inline: 1rem;
+  position: sticky;
+  top: 0;
+  height: 60px;
+  justify-content: space-between;
   display: flex;
-  flex: 1;
-  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
   background-color: rgb(54, 43, 82);
   color: rgb(240, 237, 237);
+  z-index: 1;
 }
-.nav button {
-  width: 30px;
-  height: 30px;
+.nav a {
+  color: white;
+  text-align: right;
+  text-decoration: none;
+  font-size: larger;
 }
 .nav .bland-logo {
   font-size: xx-large;
 }
 .row-1 {
-  display: flex;
+  padding-inline: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   background-color: #6464eb3d;
   min-height: 300px;
+}
+.side-left {
+  align-items: center;
+  margin-block: auto;
 }
 .side-right {
   background-color: rgb(218, 218, 224);
@@ -34,12 +54,13 @@ body {
   border-radius: 10px;
 }
 .row-2 {
-  display: flex;
+  display: grid;
   background-color: rgb(218, 218, 224);
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  background-color: #6464eb3d;
 }
 .row-2 div {
-  width: 450;
+  /* width: 450; */
   border-radius: 10px;
   color: black;
   background-color: white;
@@ -47,14 +68,16 @@ body {
   padding: 10px;
 }
 .footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   bottom: 0;
   background-color: rgb(54, 43, 82);
   color: white;
   justify-content: space-between;
   flex: 1;
-}
-.footer div {
   padding: 1rem;
-  flex: 1;
+}
+.footer a {
+  color: aliceblue;
+  text-decoration: none;
 }
