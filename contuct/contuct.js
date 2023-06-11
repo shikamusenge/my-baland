@@ -26,7 +26,7 @@ formData.addEventListener("submit", async (e) => {
     console.log(res);
     Msg.style.visibility = "visible";
     submitBtn.innerHTML = "send";
-    // clearMessage();
+    clearMessage();
   });
 });
 const clearMessage = () => {
