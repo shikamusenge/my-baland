@@ -8,7 +8,7 @@ formData.addEventListener("submit", async (e) => {
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "shikamusenge720@gmail.com",
-    Password: "x-ray.123",
+    Password: "F281003AEF102D9189CD73C477F0F1EE66D4",
     To: "shikamusenge720@gmail.com",
     From: email.value,
     Subject: "{>RSP NEW MY BLAND-MESSAG ",
