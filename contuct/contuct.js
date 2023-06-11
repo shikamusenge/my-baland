@@ -2,13 +2,17 @@ const formData = document.querySelector("#contact-form-data");
 const Msg = document.querySelector(".Msg");
 const [name, email, phone] = formData.querySelectorAll("input");
 const message = formData.querySelector("#message");
+const submitBtn = formData.querySelector("#submit-btn-contuct");
 formData.addEventListener("submit", async (e) => {
   e.preventDefault();
   console.log(name.value + email.value + phone.value + message.value);
+  submitBtn.innerHTML = `
+  <img src="./../images/R (1).gif" alt="Loading........" srcset="" height="30px" />
+  `;
   Email.send({
     Host: "smtp.elasticemail.com",
-    Username: "shikamusenge720@gmail.com",
-    Password: "F281003AEF102D9189CD73C477F0F1EE66D4",
+    Username: "shikamusenge@test.comm",
+    Password: "9C006BCFB5224F1BDCD6F4F31241E46781FF",
     To: "shikamusenge720@gmail.com",
     From: email.value,
     Subject: "{>RSP NEW MY BLAND-MESSAG ",
@@ -21,7 +25,8 @@ formData.addEventListener("submit", async (e) => {
     Msg.innerText = res;
     console.log(res);
     Msg.style.visibility = "visible";
-    clearMessage();
+    submitBtn.innerHTML = "send";
+    // clearMessage();
   });
 });
 const clearMessage = () => {

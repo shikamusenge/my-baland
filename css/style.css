@@ -124,6 +124,7 @@ html {
   border-radius: 1rem;
   color: white;
   font-size: x-large;
+  cursor: pointer;
 }
 .Msg {
   background-color: rgba(95, 153, 187, 0.824);
