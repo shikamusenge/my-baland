@@ -7,7 +7,7 @@ formData.addEventListener("submit", async (e) => {
   console.log(name.value + email.value + phone.value + message.value);
   Email.send({
     Host: "smtp.elasticemail.com",
-    Username: "shikamusenge",
+    Username: "shikamusenge720@gmail.com",
     Password: "x-ray.123",
     To: "shikamusenge720@gmail.com",
     From: email.value,
@@ -21,7 +21,7 @@ formData.addEventListener("submit", async (e) => {
     Msg.innerText = res;
     console.log(res);
     Msg.style.visibility = "visible";
-    // clearMessage();
+    clearMessage();
   });
 });
 const clearMessage = () => {
